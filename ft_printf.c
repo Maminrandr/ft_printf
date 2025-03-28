@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 02:06:00 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/27 11:36:40 by maminran         ###   ########.fr       */
+/*   Updated: 2025/03/28 16:37:42 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			// if (format[i + 1] == '%')
+			// 	count = ft_putchar('%');
 			count += get_format(format[i], args);
 		}
 		else
