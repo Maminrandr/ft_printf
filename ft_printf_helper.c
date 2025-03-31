@@ -34,6 +34,8 @@ int	get_format(char format, va_list args)
 		count += ft_putstr(va_arg(args, char *));
 	else if (format == 'd' || format == 'i')
 		count += ft_putnbr(va_arg(args, int));
+	else if (format == 'x' || format == 'X')
+		count += ft_put_hex(va_arg(args, int));
 	// ---else if (format == 'u')
 	// 	---count += ft_put(va_arg(args, char *));
 	// ---else if (format == 'x' || format == 'X')
