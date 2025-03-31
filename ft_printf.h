@@ -23,7 +23,9 @@ int		ft_putchar(char c);
 int		ft_putstr(char *str);
 size_t	ft_strlen(char *str);
 int		ft_putnbr(int n);
+int		ft_put_hex(int n);
 int		ft_printf(const char *format, ...);
 char	*ft_itoa(int n);
+void	ft_put_address(void *ptr);
 
 #endif
