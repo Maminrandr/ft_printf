@@ -14,7 +14,5 @@
 
 int	main(void)
 {
-	ft_printf("\n\nvalue fake ==>%d\n", ft_printf("\n {%%%c}\n\n char ==>\n\n int ==> {%d}\n\n string ==> {%s}\n", 'o', 98, "sdf"));
-
-	printf("\n value real ==>(%d)\n", printf("PARTIE\n {%%%c}\n\n char ==> \n\n int ==> {%d}\n\n string ==> {%s}\n\n", 'o', 98, "sdfasd"));
+	ft_printf("%x",15);
 }
