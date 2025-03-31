@@ -54,3 +54,28 @@ int	ft_putnbr(int n)
 	}
 	return (count);
 }
+int	ft_put_hex(int n)
+{
+	char	c;
+	int	count;
+
+	count = ft_strlen(ft_itoa(n));
+
+	if (n >= 16)
+		ft_put_hex(n / 16);
+
+	if (n % 16 < 10)
+		c = (n % 16) + '0';
+	else
+		c = (n % 16) - 10 + 'a';
+
+	write(1, &c, 1);
+	return (count);
+}
+void ft_put_address(void *ptr)
+{
+    unsigned long address = (unsigned long)ptr;
+    
+    write(1, "0x", 2);
+    ft_put_hex(address);
+}
