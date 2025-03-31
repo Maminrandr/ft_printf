@@ -26,8 +26,6 @@ int	ft_printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			// if (format[i + 1] == '%')
-			// 	count = ft_putchar('%');
 			count += get_format(format[i], args);
 		}
 		else
