@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 02:06:00 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/28 16:37:42 by maminran         ###   ########.fr       */
+/*   Updated: 2025/04/01 16:40:00 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,10 @@ int	ft_printf(const char *format, ...)
 			count += get_format(format[i], args);
 		}
 		else
+		{
 			ft_putchar(format[i]);
+			count++;
+		}
 		i++;
 	}
 	va_end(args);

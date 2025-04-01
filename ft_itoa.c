@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:34:53 by maminran          #+#    #+#             */
-/*   Updated: 2025/03/28 15:48:45 by maminran         ###   ########.fr       */
+/*   Updated: 2025/04/01 17:48:22 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ static char	*ft_strdup(char *s)
 	str[i] = '\0';
 	return (str);
 }
+
 static int	ft_intlen(int n)
 {
 	int		len;
