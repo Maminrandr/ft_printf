@@ -29,43 +29,41 @@ int	ft_putstr(char *str)
 
 int	ft_putpos_nbr(unsigned int n)
 {
-	int	count;
+	int		count;
+	char	*str;
 
-	count = ft_strlen(ft_itoa(n));
-	if (n > 9)
-	{
-		ft_putpos_nbr(n / 10);
-		ft_putpos_nbr(n % 10);
-	}
-	else
-	{
-		n = n + '0';
-		write(1, &n, 1);
-	}
+	count = 0;
+	str = ft_itoa(n);
+    if (!str)
+        return (-1);
+    while (str[count])
+    {
+        write(1, &str[count], 1);
+        count++;
+    }
+    free(str);
 	return (count);
 }
 
 int	ft_putnbr(int n)
 {
-	int	count;
+	int		count;
+    char	*str;
 
-	count = ft_strlen(ft_itoa(n));
-	if (n == -2147483648)
-		write(1, "-2147483648", 11);
-	else if (n < 0)
-	{
-		write(1, "-", 1);
-		ft_putnbr(n * (-1));
-	}
-	else if (n > 9)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		n = n + '0';
-		write(1, &n, 1);
-	}
+	count = 0;
+    if (n == -2147483648)
+    {
+        write(1, "-2147483648", 11);
+        return (11);
+    }
+    str = ft_itoa(n);
+    if (!str)
+        return (-1);
+    while (str[count])
+    {
+        write(1, &str[count], 1);
+        count++;
+    }
+    free(str);
 	return (count);
 }
