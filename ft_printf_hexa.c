@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 17:36:49 by maminran          #+#    #+#             */
-/*   Updated: 2025/04/01 17:46:23 by maminran         ###   ########.fr       */
+/*   Updated: 2025/04/03 15:32:26 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int	ft_put_hex(char x, unsigned int n)
 		count += ft_put_hex(x, n / 16);
 	if (n % 16 < 10)
 		c = (n % 16) + '0';
-	else if(x == 'x')
+	else if (x == 'x')
 		c = (n % 16) - 10 + 'a';
 	else
 		c = (n % 16) - 10 + 'A';
@@ -30,6 +30,7 @@ int	ft_put_hex(char x, unsigned int n)
 	count++;
 	return (count);
 }
+
 static int	ft_address_helper(unsigned long n)
 {
 	char	c;
@@ -46,12 +47,18 @@ static int	ft_address_helper(unsigned long n)
 	count++;
 	return (count);
 }
+
 int	ft_put_pointer_address(void *ptr)
 {
 	unsigned long	address;
 	int				count;
 
 	count = 0;
+	if (!ptr)
+	{
+		write(1, "(nil)", 5);
+		return (5);
+	}
 	address = (unsigned long)ptr;
 	count += ft_putchar('0');
 	count += ft_putchar('x');

@@ -6,7 +6,7 @@
 /*   By: maminran <maminran@student.42antananari    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/27 08:00:30 by maminran          #+#    #+#             */
-/*   Updated: 2025/04/01 17:56:59 by maminran         ###   ########.fr       */
+/*   Updated: 2025/04/03 15:32:35 by maminran         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@ int	ft_putchar(char c)
 	return (write(1, &c, 1));
 }
 
-size_t	ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
+	if (!str)
+	{
+		return (0);
+	}
 	while (str[i] != '\0')
 		i++;
 	return (i);
